@@ -1,9 +1,12 @@
 library(tercen)
 library(dplyr)
 
+ctx <- tercenCtx()
 
-(ctx = tercenCtx()) %>% 
-  select(.y, .ri, .ci) %>% 
+if(inherits(try(ctx$select(".y")), 'try-error')) stop("y axis is missing.")
+
+ctx %>%
+  select(.y, .ri, .ci) %>%
   group_by(.ri, .ci) %>%
   mutate(value = 100*.y) %>%
   ctx$addNamespace() %>%
