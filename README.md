@@ -8,11 +8,11 @@
 
 Input projection|.
 ---|---
-`y-axis`           | is the initial value before multiplication
+`y-axis`        | is the initial value before multiplication
 
 Output relations|.
 ---|---
-`value`          | numeric, value returned per data point
+`S100`          | numeric, value returned per data point
 
 ##### Details
 
@@ -20,4 +20,5 @@ The operator takes the value defined by the y-axis and multiplies this by 100. T
 
 ##### See Also
 
-[ETS](https://github.com/tercen/ETS_operator)
+[ETS_app](https://github.com/tercen/ETS_app)
+[ETS_operator](https://github.com/tercen/ETS_operator)
