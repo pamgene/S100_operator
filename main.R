@@ -9,5 +9,6 @@ ctx %>%
   select(.y, .ri, .ci) %>%
   group_by(.ri, .ci) %>%
   mutate(S100 = 100*.y) %>%
+  select(-.y) %>%
   ctx$addNamespace() %>%
   ctx$save()
